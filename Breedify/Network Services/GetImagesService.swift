@@ -1,5 +1,5 @@
 //
-//  GetBreedsService.swift
+//  GetImagesService.swift
 //  Breedify
 //
 //  Created by Ebubechukwu Dimobi on 08.08.2020.
@@ -9,13 +9,12 @@
 import Foundation
 import RxSwift
 
-struct GetBreedsService {
+struct GetImagesService {
     
-    func fetchBreeds()-> Observable<BreedsData>{
+    func fetchImages(using subUrl: String)-> Observable<ImagesData>{
         
         return Observable.create { (observer) -> Disposable in
-            let completeQueryURL = EndPoints.GetBreeds.topUrl
-            
+            let completeQueryURL = EndPoints.GetImages.baseUrl + subUrl + EndPoints.GetImages.endUrl
             if let url = URL(string: completeQueryURL){
                 
                 let session = URLSession(configuration: .default)
@@ -31,19 +30,17 @@ struct GetBreedsService {
                         do{
                             if let jsonResult = try JSONSerialization.jsonObject(with: safeData, options: [.allowFragments]) as? [String:Any]{
                                 
-                                guard let breeds = jsonResult["message"] as? [String:[String]] else{
+                                guard let imageLinks = jsonResult["message"] as? [String] else{
                                     print("Couldn't Convert to data")
                                     observer.onError(NSError(domain: "Couldn't Convert Data", code: -1, userInfo: nil))
                                     return
                                 }
-                                let breedsData = BreedsData(breeds: breeds)
-                                observer.onNext(breedsData)
+                                let imagesData = ImagesData(imageLinks: imageLinks)
+                                observer.onNext(imagesData)
                                 
                             }
                             
-                            
                         }catch{
-                            
                             print("could not parse Json---\(error)")
                             observer.onError(error)
                         }

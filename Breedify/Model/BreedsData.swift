@@ -10,4 +10,14 @@ import Foundation
 
 struct BreedsData {
     let breeds: [String:[String]]
+    
+    var mainBreeds : [String]{
+        
+        var breedNames = [String]()
+        for (key, _) in breeds.sorted(by: {$0.0 < $1.0}){
+            breedNames.append(key)
+        }
+        return breedNames
+        
+    }
 }

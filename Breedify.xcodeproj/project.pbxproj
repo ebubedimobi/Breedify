@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -24,9 +24,14 @@
 		B27F266F24DEAE5100522AB7 /* BreedsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F266E24DEAE5100522AB7 /* BreedsData.swift */; };
 		B27F267124DEAEA300522AB7 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F267024DEAEA300522AB7 /* EndPoints.swift */; };
 		B27F267324DEAF7B00522AB7 /* GetBreedsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F267224DEAF7B00522AB7 /* GetBreedsService.swift */; };
+		B27F267524DED5E000522AB7 /* ImagesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F267424DED5E000522AB7 /* ImagesData.swift */; };
+		B27F267724DED9FD00522AB7 /* GetImagesService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F267624DED9FD00522AB7 /* GetImagesService.swift */; };
+		CDD6F0AEAACE1CC6B8079E35 /* Pods_Breedify.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C7BDB7313425EB9A4079104 /* Pods_Breedify.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2C7BDB7313425EB9A4079104 /* Pods_Breedify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breedify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		585F209DAE4B2A0FF51387DE /* Pods-Breedify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breedify.release.xcconfig"; path = "Target Support Files/Pods-Breedify/Pods-Breedify.release.xcconfig"; sourceTree = "<group>"; };
 		B27F263A24DE9C4500522AB7 /* Breedify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breedify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27F263D24DE9C4500522AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B27F263F24DE9C4500522AB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +51,9 @@
 		B27F266E24DEAE5100522AB7 /* BreedsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsData.swift; sourceTree = "<group>"; };
 		B27F267024DEAEA300522AB7 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
 		B27F267224DEAF7B00522AB7 /* GetBreedsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBreedsService.swift; sourceTree = "<group>"; };
+		B27F267424DED5E000522AB7 /* ImagesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesData.swift; sourceTree = "<group>"; };
+		B27F267624DED9FD00522AB7 /* GetImagesService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetImagesService.swift; sourceTree = "<group>"; };
+		EEB0402990AFFC87BA23CA75 /* Pods-Breedify.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breedify.debug.xcconfig"; path = "Target Support Files/Pods-Breedify/Pods-Breedify.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDD6F0AEAACE1CC6B8079E35 /* Pods_Breedify.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,6 +73,8 @@
 			children = (
 				B27F263C24DE9C4500522AB7 /* Breedify */,
 				B27F263B24DE9C4500522AB7 /* Products */,
+				DC12D7DB27DE728614DC180C /* Pods */,
+				C8FB8F38A15C93CBEB4FB7C2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,6 +129,7 @@
 			isa = PBXGroup;
 			children = (
 				B27F266E24DEAE5100522AB7 /* BreedsData.swift */,
+				B27F267424DED5E000522AB7 /* ImagesData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -133,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				B27F267224DEAF7B00522AB7 /* GetBreedsService.swift */,
+				B27F267624DED9FD00522AB7 /* GetImagesService.swift */,
 				B27F267024DEAEA300522AB7 /* EndPoints.swift */,
 			);
 			path = "Network Services";
@@ -172,6 +185,23 @@
 			path = TableViewCells;
 			sourceTree = "<group>";
 		};
+		C8FB8F38A15C93CBEB4FB7C2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C7BDB7313425EB9A4079104 /* Pods_Breedify.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DC12D7DB27DE728614DC180C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EEB0402990AFFC87BA23CA75 /* Pods-Breedify.debug.xcconfig */,
+				585F209DAE4B2A0FF51387DE /* Pods-Breedify.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -179,9 +209,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B27F264E24DE9C4600522AB7 /* Build configuration list for PBXNativeTarget "Breedify" */;
 			buildPhases = (
+				33A42CEFC718A2C677C671C6 /* [CP] Check Pods Manifest.lock */,
 				B27F263624DE9C4500522AB7 /* Sources */,
 				B27F263724DE9C4500522AB7 /* Frameworks */,
 				B27F263824DE9C4500522AB7 /* Resources */,
+				69F43F684F2957E8A3DBFDD5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -240,11 +272,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		33A42CEFC718A2C677C671C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Breedify-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69F43F684F2957E8A3DBFDD5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Breedify/Pods-Breedify-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Breedify/Pods-Breedify-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Breedify/Pods-Breedify-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B27F263624DE9C4500522AB7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27F267524DED5E000522AB7 /* ImagesData.swift in Sources */,
 				B27F266F24DEAE5100522AB7 /* BreedsData.swift in Sources */,
 				B27F265B24DE9E0D00522AB7 /* FavouritesViewController.swift in Sources */,
 				B27F265924DE9DF900522AB7 /* ImagesViewController.swift in Sources */,
@@ -256,6 +331,7 @@
 				B27F266C24DEA81400522AB7 /* ImagesCollectionViewCell.swift in Sources */,
 				B27F264024DE9C4500522AB7 /* SceneDelegate.swift in Sources */,
 				B27F267124DEAEA300522AB7 /* EndPoints.swift in Sources */,
+				B27F267724DED9FD00522AB7 /* GetImagesService.swift in Sources */,
 				B27F267324DEAF7B00522AB7 /* GetBreedsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -398,6 +474,7 @@
 		};
 		B27F264F24DE9C4600522AB7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EEB0402990AFFC87BA23CA75 /* Pods-Breedify.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -417,6 +494,7 @@
 		};
 		B27F265024DE9C4600522AB7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 585F209DAE4B2A0FF51387DE /* Pods-Breedify.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -16,9 +16,6 @@ class FavouritesViewController: UIViewController {
 
         tableView.register(UINib(nibName: "BreedsTableViewCell", bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.forAllTableViews)
     }
-    
-
-
    
 }
 
