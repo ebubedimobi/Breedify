@@ -9,21 +9,43 @@
 /* Begin PBXBuildFile section */
 		B27F263E24DE9C4500522AB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F263D24DE9C4500522AB7 /* AppDelegate.swift */; };
 		B27F264024DE9C4500522AB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F263F24DE9C4500522AB7 /* SceneDelegate.swift */; };
-		B27F264224DE9C4500522AB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F264124DE9C4500522AB7 /* ViewController.swift */; };
+		B27F264224DE9C4500522AB7 /* BreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F264124DE9C4500522AB7 /* BreedsViewController.swift */; };
 		B27F264524DE9C4500522AB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27F264324DE9C4500522AB7 /* Main.storyboard */; };
 		B27F264724DE9C4600522AB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B27F264624DE9C4600522AB7 /* Assets.xcassets */; };
 		B27F264A24DE9C4600522AB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B27F264824DE9C4600522AB7 /* LaunchScreen.storyboard */; };
+		B27F265724DE9DE900522AB7 /* SubBreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F265624DE9DE900522AB7 /* SubBreedsViewController.swift */; };
+		B27F265924DE9DF900522AB7 /* ImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F265824DE9DF900522AB7 /* ImagesViewController.swift */; };
+		B27F265B24DE9E0D00522AB7 /* FavouritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F265A24DE9E0D00522AB7 /* FavouritesViewController.swift */; };
+		B27F265E24DEA14B00522AB7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F265D24DEA14B00522AB7 /* Constants.swift */; };
+		B27F266424DEA54500522AB7 /* BreedsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F266224DEA54500522AB7 /* BreedsTableViewCell.swift */; };
+		B27F266524DEA54500522AB7 /* BreedsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27F266324DEA54500522AB7 /* BreedsTableViewCell.xib */; };
+		B27F266C24DEA81400522AB7 /* ImagesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F266A24DEA81400522AB7 /* ImagesCollectionViewCell.swift */; };
+		B27F266D24DEA81400522AB7 /* ImagesCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B27F266B24DEA81400522AB7 /* ImagesCollectionViewCell.xib */; };
+		B27F266F24DEAE5100522AB7 /* BreedsData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F266E24DEAE5100522AB7 /* BreedsData.swift */; };
+		B27F267124DEAEA300522AB7 /* EndPoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F267024DEAEA300522AB7 /* EndPoints.swift */; };
+		B27F267324DEAF7B00522AB7 /* GetBreedsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F267224DEAF7B00522AB7 /* GetBreedsService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B27F263A24DE9C4500522AB7 /* Breedify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breedify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27F263D24DE9C4500522AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B27F263F24DE9C4500522AB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B27F264124DE9C4500522AB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B27F264124DE9C4500522AB7 /* BreedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsViewController.swift; sourceTree = "<group>"; };
 		B27F264424DE9C4500522AB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B27F264624DE9C4600522AB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B27F264924DE9C4600522AB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B27F264B24DE9C4600522AB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B27F265624DE9DE900522AB7 /* SubBreedsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubBreedsViewController.swift; sourceTree = "<group>"; };
+		B27F265824DE9DF900522AB7 /* ImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesViewController.swift; sourceTree = "<group>"; };
+		B27F265A24DE9E0D00522AB7 /* FavouritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouritesViewController.swift; sourceTree = "<group>"; };
+		B27F265D24DEA14B00522AB7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		B27F266224DEA54500522AB7 /* BreedsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsTableViewCell.swift; sourceTree = "<group>"; };
+		B27F266324DEA54500522AB7 /* BreedsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BreedsTableViewCell.xib; sourceTree = "<group>"; };
+		B27F266A24DEA81400522AB7 /* ImagesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesCollectionViewCell.swift; sourceTree = "<group>"; };
+		B27F266B24DEA81400522AB7 /* ImagesCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ImagesCollectionViewCell.xib; sourceTree = "<group>"; };
+		B27F266E24DEAE5100522AB7 /* BreedsData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsData.swift; sourceTree = "<group>"; };
+		B27F267024DEAEA300522AB7 /* EndPoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoints.swift; sourceTree = "<group>"; };
+		B27F267224DEAF7B00522AB7 /* GetBreedsService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetBreedsService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +80,96 @@
 			children = (
 				B27F263D24DE9C4500522AB7 /* AppDelegate.swift */,
 				B27F263F24DE9C4500522AB7 /* SceneDelegate.swift */,
-				B27F264124DE9C4500522AB7 /* ViewController.swift */,
-				B27F264324DE9C4500522AB7 /* Main.storyboard */,
+				B27F265C24DEA13700522AB7 /* Constants */,
+				B27F265524DE9CD000522AB7 /* Network Services */,
+				B27F265324DE9CB800522AB7 /* Model */,
+				B27F265424DE9CBF00522AB7 /* Persistent Model */,
+				B27F265124DE9CA500522AB7 /* View */,
+				B27F265224DE9CAD00522AB7 /* Controller */,
 				B27F264624DE9C4600522AB7 /* Assets.xcassets */,
 				B27F264824DE9C4600522AB7 /* LaunchScreen.storyboard */,
 				B27F264B24DE9C4600522AB7 /* Info.plist */,
 			);
 			path = Breedify;
+			sourceTree = "<group>";
+		};
+		B27F265124DE9CA500522AB7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B27F265F24DEA4C700522AB7 /* Screens */,
+				B27F266124DEA4F100522AB7 /* TableViewCells */,
+				B27F266024DEA4DF00522AB7 /* CollectionViewCells */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B27F265224DE9CAD00522AB7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B27F264124DE9C4500522AB7 /* BreedsViewController.swift */,
+				B27F265624DE9DE900522AB7 /* SubBreedsViewController.swift */,
+				B27F265A24DE9E0D00522AB7 /* FavouritesViewController.swift */,
+				B27F265824DE9DF900522AB7 /* ImagesViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		B27F265324DE9CB800522AB7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B27F266E24DEAE5100522AB7 /* BreedsData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		B27F265424DE9CBF00522AB7 /* Persistent Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Persistent Model";
+			sourceTree = "<group>";
+		};
+		B27F265524DE9CD000522AB7 /* Network Services */ = {
+			isa = PBXGroup;
+			children = (
+				B27F267224DEAF7B00522AB7 /* GetBreedsService.swift */,
+				B27F267024DEAEA300522AB7 /* EndPoints.swift */,
+			);
+			path = "Network Services";
+			sourceTree = "<group>";
+		};
+		B27F265C24DEA13700522AB7 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				B27F265D24DEA14B00522AB7 /* Constants.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		B27F265F24DEA4C700522AB7 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				B27F264324DE9C4500522AB7 /* Main.storyboard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		B27F266024DEA4DF00522AB7 /* CollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				B27F266A24DEA81400522AB7 /* ImagesCollectionViewCell.swift */,
+				B27F266B24DEA81400522AB7 /* ImagesCollectionViewCell.xib */,
+			);
+			path = CollectionViewCells;
+			sourceTree = "<group>";
+		};
+		B27F266124DEA4F100522AB7 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				B27F266224DEA54500522AB7 /* BreedsTableViewCell.swift */,
+				B27F266324DEA54500522AB7 /* BreedsTableViewCell.xib */,
+			);
+			path = TableViewCells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +230,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B27F266D24DEA81400522AB7 /* ImagesCollectionViewCell.xib in Resources */,
+				B27F266524DEA54500522AB7 /* BreedsTableViewCell.xib in Resources */,
 				B27F264A24DE9C4600522AB7 /* LaunchScreen.storyboard in Resources */,
 				B27F264724DE9C4600522AB7 /* Assets.xcassets in Resources */,
 				B27F264524DE9C4500522AB7 /* Main.storyboard in Resources */,
@@ -138,9 +245,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B27F264224DE9C4500522AB7 /* ViewController.swift in Sources */,
+				B27F266F24DEAE5100522AB7 /* BreedsData.swift in Sources */,
+				B27F265B24DE9E0D00522AB7 /* FavouritesViewController.swift in Sources */,
+				B27F265924DE9DF900522AB7 /* ImagesViewController.swift in Sources */,
+				B27F264224DE9C4500522AB7 /* BreedsViewController.swift in Sources */,
 				B27F263E24DE9C4500522AB7 /* AppDelegate.swift in Sources */,
+				B27F266424DEA54500522AB7 /* BreedsTableViewCell.swift in Sources */,
+				B27F265E24DEA14B00522AB7 /* Constants.swift in Sources */,
+				B27F265724DE9DE900522AB7 /* SubBreedsViewController.swift in Sources */,
+				B27F266C24DEA81400522AB7 /* ImagesCollectionViewCell.swift in Sources */,
 				B27F264024DE9C4500522AB7 /* SceneDelegate.swift in Sources */,
+				B27F267124DEAEA300522AB7 /* EndPoints.swift in Sources */,
+				B27F267324DEAF7B00522AB7 /* GetBreedsService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,6 +403,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QMSK8P2267;
 				INFOPLIST_FILE = Breedify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -305,6 +422,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QMSK8P2267;
 				INFOPLIST_FILE = Breedify/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
