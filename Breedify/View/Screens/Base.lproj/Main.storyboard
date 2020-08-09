@@ -34,7 +34,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Breeds" id="ihU-8i-9mD"/>
+                    <navigationItem key="navigationItem" title="Breeds" id="ihU-8i-9mD">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="bWg-in-V3d">
+                            <connections>
+                                <action selector="refreshButtonPressed:" destination="BYZ-38-t0r" id="E3Z-0Y-eXx"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="kps-6e-vVO" id="E3E-Gb-im6"/>
                         <segue destination="ZU3-li-FH6" kind="show" identifier="goToSubFromMain" id="OiF-t0-IGS"/>
@@ -228,7 +234,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="MF5-7z-1Ss"/>
+        <segue reference="isv-Qr-KOI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>

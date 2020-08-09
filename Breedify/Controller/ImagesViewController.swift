@@ -12,11 +12,10 @@ import Kingfisher
 
 class ImagesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-   private let disposeBag = DisposeBag()
+    private let disposeBag = DisposeBag()
     var breedName: String?
     var subBreedName: String?
     var imagesData: ImagesData?
-    // var selectedBreed: BreedsSavedData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,7 +29,7 @@ class ImagesViewController: UIViewController {
     }
     
     
-  private func GetImagesFromAPI(){
+    private func GetImagesFromAPI(){
         let getImagesService = GetImagesService()
         var subUrl = String()
         
@@ -42,14 +41,15 @@ class ImagesViewController: UIViewController {
         getImagesService.fetchImages(using: subUrl).observeOn(MainScheduler.instance).subscribe(onNext: { (imagesData) in
             self.imagesData = imagesData
             self.collectionView.reloadData()
-        }, onError: { (_) in
+        }, onError: { (error) in
             print("Network Error")
+            self.presentAlert("Server Error", message: "\(error.localizedDescription) Try again later")
         } ).disposed(by: disposeBag)
-        
         
     }
     
-  private func setNavigationItemTitle(){
+    
+    private func setNavigationItemTitle(){
         if subBreedName != nil{
             navigationItem.title = subBreedName
         }else{
@@ -57,17 +57,33 @@ class ImagesViewController: UIViewController {
         }
     }
     
-    
-    func setCollectionViewCellBounds()->CGSize{
+   private func setCollectionViewCellBounds()->CGSize{
         let screenBounds = UIScreen.main.bounds
         let width = screenBounds.width
         let height = screenBounds.height / 2
         return CGSize(width: width, height: height)
     }
     
+    private func presentAlert(_ title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
+    
     
     @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
         
+        guard let indexPath = collectionView.indexPathsForVisibleItems.first  else {return}
+        
+        let cell = collectionView.cellForItem(at: indexPath) as! ImagesCollectionViewCell
+        
+        guard let image = cell.dogImage.image else {
+            presentAlert("Error While Sharing", message: "Couldn't find image. Try again Later")
+            return
+        }
+        
+        let activityController = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        present(activityController, animated: true, completion: nil)
     }
     
 }
@@ -100,6 +116,7 @@ extension ImagesViewController: UICollectionViewDataSource{
         }else{
             cell.likeButtonOutlet.setImage(UIImage(systemName: "heart"), for: .normal)
         }
+        
         
         return cell
     }

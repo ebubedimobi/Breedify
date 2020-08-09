@@ -19,7 +19,10 @@ class BreedsViewController: UIViewController {
         
         tableView.register(UINib(nibName: "BreedsTableViewCell", bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.forAllTableViews)
         self.getBreeds()
-        
+        tableView.tableFooterView = UIView()
+    }
+    @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
+        self.getBreeds()
     }
     
     private func getBreeds(){
@@ -28,9 +31,16 @@ class BreedsViewController: UIViewController {
         getBreedsService.fetchBreeds().observeOn(MainScheduler.instance).subscribe(onNext: { (breeds) in
             self.breedsData = breeds
             self.tableView.reloadData()
-        }, onError: { (_) in
+        }, onError: { (error) in
             print("Network Error")
+            self.presentAlert("Server Error", message: "\(error.localizedDescription) Try again later")
         } ).disposed(by: disposeBag)
+    }
+    
+    private func presentAlert(_ title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
     }
     
     
