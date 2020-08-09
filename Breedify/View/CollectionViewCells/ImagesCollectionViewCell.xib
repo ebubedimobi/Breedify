@@ -18,13 +18,13 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DHb-0m-cOA">
-                        <rect key="frame" x="5" y="5" width="445" height="421"/>
+                        <rect key="frame" x="3" y="5" width="449" height="421"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="testt" translatesAutoresizingMaskIntoConstraints="NO" id="Uyv-MU-gRq">
-                                <rect key="frame" x="0.0" y="25" width="445" height="337"/>
+                                <rect key="frame" x="0.0" y="25" width="449" height="337"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="99D-Tz-juu">
-                                <rect key="frame" x="400" y="370" width="30" height="30"/>
+                                <rect key="frame" x="404" y="370" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="G52-0c-QDd"/>
                                     <constraint firstAttribute="width" constant="30" id="cXY-U4-E21"/>
@@ -53,8 +53,8 @@
             <constraints>
                 <constraint firstItem="DHb-0m-cOA" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="PvW-IT-jN8"/>
                 <constraint firstAttribute="bottom" secondItem="DHb-0m-cOA" secondAttribute="bottom" constant="5" id="SeJ-jV-zIb"/>
-                <constraint firstItem="DHb-0m-cOA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="5" id="VEs-bt-EAa"/>
-                <constraint firstAttribute="trailing" secondItem="DHb-0m-cOA" secondAttribute="trailing" constant="5" id="Zqe-a3-G57"/>
+                <constraint firstItem="DHb-0m-cOA" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="3" id="VEs-bt-EAa"/>
+                <constraint firstAttribute="trailing" secondItem="DHb-0m-cOA" secondAttribute="trailing" constant="3" id="Zqe-a3-G57"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="455" height="431"/>
