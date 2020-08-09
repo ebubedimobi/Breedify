@@ -55,13 +55,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Breeds" id="ihU-8i-9mD">
-                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="bWg-in-V3d">
-                            <connections>
-                                <action selector="refreshButtonPressed:" destination="BYZ-38-t0r" id="E3Z-0Y-eXx"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Breeds" id="ihU-8i-9mD"/>
                     <connections>
                         <outlet property="loaderView" destination="cp8-1L-Bfv" id="YMC-bV-sHF"/>
                         <outlet property="tableView" destination="kps-6e-vVO" id="E3E-Gb-im6"/>
@@ -246,6 +240,12 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="Star"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="Star"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="Star"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -266,6 +266,12 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="tintColor" name="Star"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="Star"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="Star"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -278,7 +284,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="isv-Qr-KOI"/>
+        <segue reference="MF5-7z-1Ss"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrow.2.circlepath.circle.fill" catalog="system" width="128" height="121"/>

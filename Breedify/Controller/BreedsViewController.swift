@@ -12,8 +12,8 @@ import RxSwift
 class BreedsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loaderView: UIView!
-    
-   private let disposeBag = DisposeBag()
+    private let refreshControl = UIRefreshControl()
+    private let disposeBag = DisposeBag()
     var breedsData: BreedsData?
     
     override func viewDidLoad() {
@@ -22,10 +22,14 @@ class BreedsViewController: UIViewController {
         tableView.register(UINib(nibName: "BreedsTableViewCell", bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.forAllTableViews)
         self.getBreeds()
         tableView.tableFooterView = UIView()
+        refreshControl.tintColor = .yellow
+        refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+        tableView.refreshControl = self.refreshControl
     }
-
-    @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
+    
+    @objc private func handleRefresh(){
         self.getBreeds()
+        refreshControl.endRefreshing()
     }
     
     private func getBreeds(){
@@ -44,7 +48,7 @@ class BreedsViewController: UIViewController {
     
     private func setLoader(state: Bool){
         self.loaderView.isHidden = state
-       
+        
     }
     
     private func presentAlert(_ title: String, message: String) {
