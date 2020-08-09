@@ -40,7 +40,7 @@ class BreedsViewController: UIViewController {
         }, onError: { (error) in
             self.setLoader(state: true)
             print("Network Error")
-            self.presentAlert("Server Error", message: "\(error.localizedDescription) Try again later")
+            self.presentAlert("Server Error", message: "\(error.localizedDescription)")
         } ).disposed(by: disposeBag)
     }
     
