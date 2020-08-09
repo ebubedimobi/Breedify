@@ -13,7 +13,7 @@ class BreedsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loaderView: UIView!
     
-    let disposeBag = DisposeBag()
+   private let disposeBag = DisposeBag()
     var breedsData: BreedsData?
     
     override func viewDidLoad() {
@@ -24,8 +24,6 @@ class BreedsViewController: UIViewController {
         tableView.tableFooterView = UIView()
     }
 
-    
-    
     @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
         self.getBreeds()
     }
@@ -48,6 +46,7 @@ class BreedsViewController: UIViewController {
         self.loaderView.isHidden = state
        
     }
+    
     private func presentAlert(_ title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -126,11 +125,6 @@ extension BreedsViewController{
                 ImagesVC.breedName = breedsData?.mainBreeds[indexPath.row]
                 tableView.deselectRow(at: indexPath, animated: true)
             }
-            
         }
-        
     }
-    
-    
-    
 }

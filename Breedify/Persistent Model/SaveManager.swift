@@ -72,13 +72,13 @@ struct SavedManager {
         let realm = try! Realm()
         
         do{
-             try realm.write{
+            try realm.write{
                 
-                 realm.delete(realm.objects(ImagesSavedData.self).filter("imageLink CONTAINS %@", imageLink))
-             }
-         }catch{
-             print("error while deleting\(error)")
-         }
+                realm.delete(realm.objects(ImagesSavedData.self).filter("imageLink CONTAINS %@", imageLink))
+            }
+        }catch{
+            print("error while deleting\(error)")
+        }
         
     }
 }

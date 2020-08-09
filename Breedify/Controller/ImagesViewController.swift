@@ -29,7 +29,6 @@ class ImagesViewController: UIViewController {
         }
     }
     
-    
     private func GetImagesFromAPI(){
         setLoader(state: false)
         let getImagesService = GetImagesService()
@@ -52,9 +51,9 @@ class ImagesViewController: UIViewController {
     }
     
     private func setLoader(state: Bool){
-          self.loaderView.isHidden = state
-         
-      }
+        self.loaderView.isHidden = state
+        
+    }
     
     
     private func setNavigationItemTitle(){
@@ -65,7 +64,7 @@ class ImagesViewController: UIViewController {
         }
     }
     
-   private func setCollectionViewCellBounds()->CGSize{
+    private func setCollectionViewCellBounds()->CGSize{
         let screenBounds = UIScreen.main.bounds
         let width = screenBounds.width
         let height = screenBounds.height / 2
@@ -131,6 +130,7 @@ extension ImagesViewController: UICollectionViewDataSource{
     
 }
 
+//MARK: - UICollectionViewDelegateFlowLayout Methods
 extension ImagesViewController: UICollectionViewDelegateFlowLayout{
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -160,8 +160,6 @@ extension ImagesViewController: ImagesCollectionViewCellDelegate {
             saveManager.saveToDataBase(imageLink: imagesData?.imageLinks[index] ?? "", breedsCategory: breedCategory)
             likeButtonOutlet.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         }
-        
-        
     }
     
 }

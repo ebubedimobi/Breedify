@@ -21,7 +21,6 @@ class SubBreedsViewController: UIViewController {
         tableView.register(UINib(nibName: "BreedsTableViewCell", bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.forAllTableViews)
         navigationItem.title = breed
         tableView.tableFooterView = UIView()
-        
     }
 }
 

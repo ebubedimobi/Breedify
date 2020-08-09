@@ -16,7 +16,8 @@ class FavouritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(UINib(nibName: "BreedsTableViewCell", bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.forAllTableViews)
+        tableView.register(UINib(nibName: "BreedsTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: Constants.CellIdentifiers.forAllTableViews)
         loadDataFromCache()
         tableView.tableFooterView = UIView()
     }
@@ -60,11 +61,9 @@ extension FavouritesViewController: UITableViewDelegate{
         
         performSegue(withIdentifier: Constants.Segue.FavsToImages, sender: self)
     }
-    
-    
-    
 }
 
+//MARK: - Segues and Navigation
 extension FavouritesViewController{
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -84,7 +83,6 @@ extension FavouritesViewController{
         }
         
     }
-    
     
     private func getImagesFromCache(through indexPath: IndexPath) -> [String]{
         
