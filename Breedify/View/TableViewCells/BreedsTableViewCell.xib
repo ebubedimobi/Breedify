@@ -26,27 +26,42 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subbreeds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hyx-aX-HsE">
-                                <rect key="frame" x="97" y="13" width="60" height="15"/>
+                                <rect key="frame" x="125.5" y="13" width="60" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o8H-g9-a7V">
-                                <rect key="frame" x="82.5" y="13" width="13.5" height="15"/>
+                                <rect key="frame" x="111" y="13" width="13.5" height="15"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ieo-F2-tw6">
+                                <rect key="frame" x="103" y="14.5" width="4" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=")" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60R-WP-xDF">
+                                <rect key="frame" x="189.5" y="14.5" width="4" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="o8H-g9-a7V" firstAttribute="leading" secondItem="YUd-YD-nN8" secondAttribute="trailing" constant="18" id="2gf-Yc-0Ta"/>
-                            <constraint firstItem="Hyx-aX-HsE" firstAttribute="leading" secondItem="o8H-g9-a7V" secondAttribute="trailing" constant="1" id="CTh-n9-L4R"/>
-                            <constraint firstItem="Hyx-aX-HsE" firstAttribute="centerY" secondItem="DbB-p0-61K" secondAttribute="centerY" id="CnC-pv-TBQ"/>
-                            <constraint firstItem="o8H-g9-a7V" firstAttribute="centerY" secondItem="DbB-p0-61K" secondAttribute="centerY" id="qXB-Jq-SAc"/>
-                            <constraint firstItem="YUd-YD-nN8" firstAttribute="centerY" secondItem="DbB-p0-61K" secondAttribute="centerY" id="urr-xa-gsF"/>
-                            <constraint firstItem="Hyx-aX-HsE" firstAttribute="centerY" secondItem="DbB-p0-61K" secondAttribute="centerY" id="usE-HP-tmj"/>
-                            <constraint firstItem="YUd-YD-nN8" firstAttribute="leading" secondItem="DbB-p0-61K" secondAttribute="leading" constant="16" id="wy9-nk-mec"/>
+                            <constraint firstItem="Hyx-aX-HsE" firstAttribute="leading" secondItem="o8H-g9-a7V" secondAttribute="trailing" constant="1" id="1Nv-mf-wGV"/>
+                            <constraint firstItem="YUd-YD-nN8" firstAttribute="centerY" secondItem="DbB-p0-61K" secondAttribute="centerY" id="Cni-Lu-RO8"/>
+                            <constraint firstItem="YUd-YD-nN8" firstAttribute="leading" secondItem="DbB-p0-61K" secondAttribute="leading" constant="16" id="Drd-6j-di7"/>
+                            <constraint firstItem="ieo-F2-tw6" firstAttribute="centerY" secondItem="DbB-p0-61K" secondAttribute="centerY" id="eik-8y-vGs"/>
+                            <constraint firstItem="o8H-g9-a7V" firstAttribute="centerY" secondItem="DbB-p0-61K" secondAttribute="centerY" id="hPm-az-BAi"/>
+                            <constraint firstItem="ieo-F2-tw6" firstAttribute="leading" secondItem="YUd-YD-nN8" secondAttribute="trailing" constant="38.5" id="kVg-xE-yFN"/>
+                            <constraint firstItem="Hyx-aX-HsE" firstAttribute="centerY" secondItem="DbB-p0-61K" secondAttribute="centerY" id="mQH-68-GIg"/>
+                            <constraint firstItem="60R-WP-xDF" firstAttribute="centerY" secondItem="DbB-p0-61K" secondAttribute="centerY" id="u8S-2M-Uk5"/>
+                            <constraint firstItem="o8H-g9-a7V" firstAttribute="leading" secondItem="ieo-F2-tw6" secondAttribute="trailing" constant="4" id="ueS-bL-b4w"/>
+                            <constraint firstItem="60R-WP-xDF" firstAttribute="leading" secondItem="Hyx-aX-HsE" secondAttribute="trailing" constant="4" id="v0c-i7-xAP"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -60,7 +75,9 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="breedNameLabel" destination="YUd-YD-nN8" id="zrd-SQ-oIb"/>
+                <outlet property="closeBracket" destination="60R-WP-xDF" id="GzO-qN-Pto"/>
                 <outlet property="infoLabel" destination="Hyx-aX-HsE" id="5d9-ut-0S3"/>
+                <outlet property="openBracket" destination="ieo-F2-tw6" id="Rsb-58-kDO"/>
                 <outlet property="subbreedNumLabel" destination="o8H-g9-a7V" id="Ldd-uA-iez"/>
             </connections>
             <point key="canvasLocation" x="55" y="25"/>

@@ -12,7 +12,7 @@ import Kingfisher
 
 class ImagesViewController: UIViewController {
     @IBOutlet weak var collectionView: UICollectionView!
-    let disposeBag = DisposeBag()
+   private let disposeBag = DisposeBag()
     var breedName: String?
     var subBreedName: String?
     var imagesData: ImagesData?
@@ -23,10 +23,14 @@ class ImagesViewController: UIViewController {
         
         collectionView.register(UINib(nibName: "ImagesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: Constants.CellIdentifiers.forImages)
         setNavigationItemTitle()
-        GetImages()
+        
+        if imagesData == nil{
+            GetImagesFromAPI()
+        }
     }
     
-    func GetImages(){
+    
+  private func GetImagesFromAPI(){
         let getImagesService = GetImagesService()
         var subUrl = String()
         
@@ -45,7 +49,7 @@ class ImagesViewController: UIViewController {
         
     }
     
-    func setNavigationItemTitle(){
+  private func setNavigationItemTitle(){
         if subBreedName != nil{
             navigationItem.title = subBreedName
         }else{
@@ -134,9 +138,5 @@ extension ImagesViewController: ImagesCollectionViewCellDelegate {
         
         
     }
-    
-    
-    
-    
     
 }

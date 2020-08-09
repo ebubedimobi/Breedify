@@ -51,9 +51,13 @@ extension BreedsViewController: UITableViewDataSource {
             if breedsData?.breeds[key]?.isEmpty ?? true{
                 cell.subbreedNumLabel.isHidden = true
                 cell.infoLabel.isHidden = true
+                cell.openBracket.isHidden = true
+                cell.closeBracket.isHidden = true
             }else{
                 cell.subbreedNumLabel.isHidden = false
                 cell.infoLabel.isHidden = false
+                cell.openBracket.isHidden = false
+                cell.closeBracket.isHidden = false
                 cell.subbreedNumLabel.text = String(breedsData?.breeds[key]?.count ?? 0)
             }
             

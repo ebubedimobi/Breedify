@@ -13,6 +13,8 @@ class BreedsTableViewCell: UITableViewCell {
     @IBOutlet weak var breedNameLabel: UILabel!
     @IBOutlet weak var subbreedNumLabel: UILabel!
     @IBOutlet weak var infoLabel: UILabel!
+    @IBOutlet weak var openBracket: UILabel!
+    @IBOutlet weak var closeBracket: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

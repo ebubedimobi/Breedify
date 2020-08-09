@@ -20,6 +20,7 @@ class SubBreedsViewController: UIViewController {
         
         tableView.register(UINib(nibName: "BreedsTableViewCell", bundle: nil), forCellReuseIdentifier: Constants.CellIdentifiers.forAllTableViews)
         navigationItem.title = breed
+        tableView.tableFooterView = UIView()
         
     }
 }
@@ -34,6 +35,8 @@ extension SubBreedsViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.CellIdentifiers.forAllTableViews, for: indexPath) as! BreedsTableViewCell
         cell.infoLabel.isHidden = true
         cell.subbreedNumLabel.isHidden = true
+        cell.openBracket.isHidden = true
+        cell.closeBracket.isHidden = true
         if subBreeds != nil{
             cell.breedNameLabel.text = subBreeds![indexPath.row]
         }
@@ -70,7 +73,4 @@ extension SubBreedsViewController{
         }
         
     }
-    
-    
-    
 }
