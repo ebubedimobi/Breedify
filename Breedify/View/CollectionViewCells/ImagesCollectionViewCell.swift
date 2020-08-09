@@ -8,16 +8,24 @@
 
 import UIKit
 
+protocol ImagesCollectionViewCellDelegate {
+    func likeButtonTapped(index: Int, on likeButtonOutlet: UIButton)
+}
+
 class ImagesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var dogImage: UIImageView!
     @IBOutlet weak var likeButtonOutlet: UIButton!
-    
+    var delegate: ImagesCollectionViewCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+       
     }
 
 
+    @IBAction func likeButtonPressed(_ sender: UIButton) {
+        
+        delegate?.likeButtonTapped(index: sender.tag, on: likeButtonOutlet)
+    }
     
     
 }

@@ -126,7 +126,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qlw-NW-1eA">
-                                <rect key="frame" x="0.0" y="140" width="414" height="603"/>
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Tq9-2e-djw">
                                     <size key="itemSize" width="900" height="603"/>
@@ -140,28 +140,12 @@
                                     <outlet property="delegate" destination="YYq-Ng-xyN" id="EVV-6j-1mx"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zh6-E4-Ism">
-                                <rect key="frame" x="344" y="743" width="50" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="qoW-nb-yLl"/>
-                                    <constraint firstAttribute="width" constant="50" id="uPI-Rg-yGT"/>
-                                </constraints>
-                                <color key="tintColor" name="Star"/>
-                                <state key="normal" image="heart" catalog="system">
-                                    <color key="titleColor" name="Star"/>
-                                </state>
-                                <connections>
-                                    <action selector="likeButtonPressed:" destination="YYq-Ng-xyN" eventType="touchUpInside" id="OC2-fx-28Z"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="zh6-E4-Ism" firstAttribute="top" secondItem="Qlw-NW-1eA" secondAttribute="bottom" id="1B5-ok-pCG"/>
-                            <constraint firstItem="xWq-Vi-7R6" firstAttribute="trailing" secondItem="zh6-E4-Ism" secondAttribute="trailing" constant="20" id="7fa-ko-6FP"/>
                             <constraint firstItem="Qlw-NW-1eA" firstAttribute="top" secondItem="xWq-Vi-7R6" secondAttribute="top" id="Jl0-va-aeY"/>
-                            <constraint firstItem="xWq-Vi-7R6" firstAttribute="bottom" secondItem="zh6-E4-Ism" secondAttribute="bottom" constant="20" id="MXn-OF-XQw"/>
                             <constraint firstItem="Qlw-NW-1eA" firstAttribute="trailing" secondItem="xWq-Vi-7R6" secondAttribute="trailing" id="YJE-pQ-3qu"/>
+                            <constraint firstItem="xWq-Vi-7R6" firstAttribute="bottom" secondItem="Qlw-NW-1eA" secondAttribute="bottom" id="c3U-y1-Uts"/>
                             <constraint firstItem="Qlw-NW-1eA" firstAttribute="leading" secondItem="xWq-Vi-7R6" secondAttribute="leading" id="u7Q-U7-Wzj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xWq-Vi-7R6"/>
@@ -244,7 +228,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Wyc-ux-r5U"/>
+        <segue reference="MF5-7z-1Ss"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="109"/>

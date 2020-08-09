@@ -16,6 +16,7 @@ class ImagesViewController: UIViewController {
     var breedName: String?
     var subBreedName: String?
     var imagesData: ImagesData?
+    // var selectedBreed: BreedsSavedData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,9 +65,6 @@ class ImagesViewController: UIViewController {
     @IBAction func shareButtonTapped(_ sender: UIBarButtonItem) {
         
     }
-    @IBAction func likeButtonPressed(_ sender: UIButton) {
-        
-    }
     
 }
 
@@ -78,7 +76,7 @@ extension ImagesViewController: UICollectionViewDataSource{
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifiers.forImages, for: indexPath) as! ImagesCollectionViewCell
-        
+        cell.delegate = self
         if let imageUrl = URL(string: imagesData?.imageLinks[indexPath.row] ?? ""  ){
             cell.dogImage.kf.indicatorType = .activity
             cell.dogImage.kf.setImage(
@@ -90,11 +88,17 @@ extension ImagesViewController: UICollectionViewDataSource{
             ])
             
         }
+        cell.likeButtonOutlet.tag = indexPath.row
+        
+        let saveManager = SavedManager()
+        if saveManager.checkIfImageAlreadyExists(with: imagesData?.imageLinks[indexPath.row] ?? ""){
+            cell.likeButtonOutlet.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        }else{
+            cell.likeButtonOutlet.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
         
         return cell
     }
-    
-    
     
 }
 
@@ -104,6 +108,32 @@ extension ImagesViewController: UICollectionViewDelegateFlowLayout{
         return self.setCollectionViewCellBounds()
     }
     
+}
+
+//MARK: - Custom ImagesCollectionViewCellDelegate
+extension ImagesViewController: ImagesCollectionViewCellDelegate {
+    
+    func likeButtonTapped(index: Int, on likeButtonOutlet: UIButton) {
+        
+        var breedCategory = String()
+        
+        if self.subBreedName != nil {
+            breedCategory = self.subBreedName!
+        }else{
+            breedCategory = self.breedName!
+        }
+        
+        let saveManager = SavedManager()
+        if saveManager.checkIfImageAlreadyExists(with: imagesData?.imageLinks[index] ?? ""){
+            saveManager.deleteImage(with: imagesData?.imageLinks[index] ?? "")
+            likeButtonOutlet.setImage(UIImage(systemName: "heart"), for: .normal)
+        }else{
+            saveManager.saveToDataBase(imageLink: imagesData?.imageLinks[index] ?? "", breedsCategory: breedCategory)
+            likeButtonOutlet.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        }
+        
+        
+    }
     
     
     

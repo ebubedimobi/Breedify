@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B202C59624DFD1EC008502A4 /* BreedsSavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B202C59524DFD1EC008502A4 /* BreedsSavedData.swift */; };
+		B202C59824DFD1FD008502A4 /* ImagesSavedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B202C59724DFD1FD008502A4 /* ImagesSavedData.swift */; };
+		B202C59A24DFD46F008502A4 /* SaveManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B202C59924DFD46F008502A4 /* SaveManager.swift */; };
 		B27F263E24DE9C4500522AB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F263D24DE9C4500522AB7 /* AppDelegate.swift */; };
 		B27F264024DE9C4500522AB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F263F24DE9C4500522AB7 /* SceneDelegate.swift */; };
 		B27F264224DE9C4500522AB7 /* BreedsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27F264124DE9C4500522AB7 /* BreedsViewController.swift */; };
@@ -32,6 +35,9 @@
 /* Begin PBXFileReference section */
 		2C7BDB7313425EB9A4079104 /* Pods_Breedify.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Breedify.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		585F209DAE4B2A0FF51387DE /* Pods-Breedify.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Breedify.release.xcconfig"; path = "Target Support Files/Pods-Breedify/Pods-Breedify.release.xcconfig"; sourceTree = "<group>"; };
+		B202C59524DFD1EC008502A4 /* BreedsSavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsSavedData.swift; sourceTree = "<group>"; };
+		B202C59724DFD1FD008502A4 /* ImagesSavedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesSavedData.swift; sourceTree = "<group>"; };
+		B202C59924DFD46F008502A4 /* SaveManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveManager.swift; sourceTree = "<group>"; };
 		B27F263A24DE9C4500522AB7 /* Breedify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Breedify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B27F263D24DE9C4500522AB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B27F263F24DE9C4500522AB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -137,6 +143,9 @@
 		B27F265424DE9CBF00522AB7 /* Persistent Model */ = {
 			isa = PBXGroup;
 			children = (
+				B202C59524DFD1EC008502A4 /* BreedsSavedData.swift */,
+				B202C59724DFD1FD008502A4 /* ImagesSavedData.swift */,
+				B202C59924DFD46F008502A4 /* SaveManager.swift */,
 			);
 			path = "Persistent Model";
 			sourceTree = "<group>";
@@ -320,12 +329,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				B27F267524DED5E000522AB7 /* ImagesData.swift in Sources */,
+				B202C59A24DFD46F008502A4 /* SaveManager.swift in Sources */,
 				B27F266F24DEAE5100522AB7 /* BreedsData.swift in Sources */,
 				B27F265B24DE9E0D00522AB7 /* FavouritesViewController.swift in Sources */,
+				B202C59824DFD1FD008502A4 /* ImagesSavedData.swift in Sources */,
 				B27F265924DE9DF900522AB7 /* ImagesViewController.swift in Sources */,
 				B27F264224DE9C4500522AB7 /* BreedsViewController.swift in Sources */,
 				B27F263E24DE9C4500522AB7 /* AppDelegate.swift in Sources */,
 				B27F266424DEA54500522AB7 /* BreedsTableViewCell.swift in Sources */,
+				B202C59624DFD1EC008502A4 /* BreedsSavedData.swift in Sources */,
 				B27F265E24DEA14B00522AB7 /* Constants.swift in Sources */,
 				B27F265724DE9DE900522AB7 /* SubBreedsViewController.swift in Sources */,
 				B27F266C24DEA81400522AB7 /* ImagesCollectionViewCell.swift in Sources */,
