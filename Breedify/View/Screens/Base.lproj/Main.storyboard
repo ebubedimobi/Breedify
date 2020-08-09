@@ -13,7 +13,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="BreedsViewController" customModule="Breedify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="kps-6e-vVO">
@@ -24,13 +24,34 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="cwO-Nq-9gX"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cp8-1L-Bfv">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.2.circlepath.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PEE-Te-gwk">
+                                        <rect key="frame" x="182" y="311.5" width="50" height="50"/>
+                                        <color key="tintColor" name="Star"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="4Ja-eU-b8u"/>
+                                            <constraint firstAttribute="width" constant="50" id="Tne-2M-4bc"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="PEE-Te-gwk" firstAttribute="centerY" secondItem="cp8-1L-Bfv" secondAttribute="centerY" id="HwL-oB-UQC"/>
+                                    <constraint firstItem="PEE-Te-gwk" firstAttribute="centerX" secondItem="cp8-1L-Bfv" secondAttribute="centerX" id="Tvm-EK-7Kq"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cp8-1L-Bfv" secondAttribute="trailing" id="47G-50-RxQ"/>
                             <constraint firstItem="kps-6e-vVO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="DxS-a6-rjl"/>
                             <constraint firstItem="kps-6e-vVO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="K0k-aZ-BWn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cp8-1L-Bfv" secondAttribute="bottom" id="SPc-n4-muc"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="kps-6e-vVO" secondAttribute="bottom" id="atl-YL-ydL"/>
+                            <constraint firstItem="cp8-1L-Bfv" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fRC-hS-Nl0"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kps-6e-vVO" secondAttribute="trailing" id="uKu-8x-jjz"/>
+                            <constraint firstItem="cp8-1L-Bfv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xu3-7M-sAs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -42,6 +63,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="loaderView" destination="cp8-1L-Bfv" id="YMC-bV-sHF"/>
                         <outlet property="tableView" destination="kps-6e-vVO" id="E3E-Gb-im6"/>
                         <segue destination="ZU3-li-FH6" kind="show" identifier="goToSubFromMain" id="OiF-t0-IGS"/>
                         <segue destination="YYq-Ng-xyN" kind="show" identifier="goToImagesFromMain" id="isv-Qr-KOI"/>
@@ -56,7 +78,7 @@
             <objects>
                 <viewController id="ZU3-li-FH6" customClass="SubBreedsViewController" customModule="Breedify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dyr-FW-j7p">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XsP-Ak-mNO">
@@ -92,7 +114,7 @@
             <objects>
                 <viewController id="h0Q-yF-2Gu" customClass="FavouritesViewController" customModule="Breedify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="drg-pi-mgU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="53" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jKV-gm-JUL">
@@ -128,7 +150,7 @@
             <objects>
                 <viewController id="YYq-Ng-xyN" customClass="ImagesViewController" customModule="Breedify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Amj-TD-V4d">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Qlw-NW-1eA">
@@ -146,12 +168,33 @@
                                     <outlet property="delegate" destination="YYq-Ng-xyN" id="EVV-6j-1mx"/>
                                 </connections>
                             </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uUu-v3-tWK">
+                                <rect key="frame" x="0.0" y="140" width="414" height="673"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow.2.circlepath.circle.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Hng-uj-hph">
+                                        <rect key="frame" x="182" y="311.5" width="50" height="50"/>
+                                        <color key="tintColor" name="Star"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="51" id="3G3-K3-r60"/>
+                                            <constraint firstAttribute="width" constant="50" id="b5w-E4-E4R"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Hng-uj-hph" firstAttribute="centerY" secondItem="uUu-v3-tWK" secondAttribute="centerY" id="Ocv-ML-lNz"/>
+                                    <constraint firstItem="Hng-uj-hph" firstAttribute="centerX" secondItem="uUu-v3-tWK" secondAttribute="centerX" id="cij-wv-JGg"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="uUu-v3-tWK" firstAttribute="top" secondItem="xWq-Vi-7R6" secondAttribute="top" id="9QB-UZ-qMy"/>
+                            <constraint firstItem="xWq-Vi-7R6" firstAttribute="bottom" secondItem="uUu-v3-tWK" secondAttribute="bottom" id="CFO-0E-nPT"/>
+                            <constraint firstItem="xWq-Vi-7R6" firstAttribute="trailing" secondItem="uUu-v3-tWK" secondAttribute="trailing" id="Fvw-df-mdC"/>
                             <constraint firstItem="Qlw-NW-1eA" firstAttribute="top" secondItem="xWq-Vi-7R6" secondAttribute="top" id="Jl0-va-aeY"/>
                             <constraint firstItem="Qlw-NW-1eA" firstAttribute="trailing" secondItem="xWq-Vi-7R6" secondAttribute="trailing" id="YJE-pQ-3qu"/>
                             <constraint firstItem="xWq-Vi-7R6" firstAttribute="bottom" secondItem="Qlw-NW-1eA" secondAttribute="bottom" id="c3U-y1-Uts"/>
+                            <constraint firstItem="uUu-v3-tWK" firstAttribute="leading" secondItem="xWq-Vi-7R6" secondAttribute="leading" id="cJ0-QC-m0m"/>
                             <constraint firstItem="Qlw-NW-1eA" firstAttribute="leading" secondItem="xWq-Vi-7R6" secondAttribute="leading" id="u7Q-U7-Wzj"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="xWq-Vi-7R6"/>
@@ -165,6 +208,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="Qlw-NW-1eA" id="QoE-E3-Pr6"/>
+                        <outlet property="loaderView" destination="uUu-v3-tWK" id="HD4-hq-jUj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xb2-eC-uAq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -237,6 +281,7 @@
         <segue reference="isv-Qr-KOI"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="arrow.2.circlepath.circle.fill" catalog="system" width="128" height="121"/>
         <image name="heart" catalog="system" width="128" height="109"/>
         <image name="heart.fill" catalog="system" width="128" height="109"/>
         <image name="list.bullet" catalog="system" width="128" height="88"/>

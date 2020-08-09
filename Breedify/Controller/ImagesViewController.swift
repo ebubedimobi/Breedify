@@ -11,6 +11,7 @@ import RxSwift
 import Kingfisher
 
 class ImagesViewController: UIViewController {
+    @IBOutlet weak var loaderView: UIView!
     @IBOutlet weak var collectionView: UICollectionView!
     private let disposeBag = DisposeBag()
     var breedName: String?
@@ -30,6 +31,7 @@ class ImagesViewController: UIViewController {
     
     
     private func GetImagesFromAPI(){
+        setLoader(state: false)
         let getImagesService = GetImagesService()
         var subUrl = String()
         
@@ -39,14 +41,20 @@ class ImagesViewController: UIViewController {
             subUrl = ("\(self.breedName!)")
         }
         getImagesService.fetchImages(using: subUrl).observeOn(MainScheduler.instance).subscribe(onNext: { (imagesData) in
+            self.setLoader(state: true)
             self.imagesData = imagesData
             self.collectionView.reloadData()
         }, onError: { (error) in
+            self.setLoader(state: true)
             print("Network Error")
             self.presentAlert("Server Error", message: "\(error.localizedDescription) Try again later")
         } ).disposed(by: disposeBag)
-        
     }
+    
+    private func setLoader(state: Bool){
+          self.loaderView.isHidden = state
+         
+      }
     
     
     private func setNavigationItemTitle(){

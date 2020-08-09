@@ -11,6 +11,8 @@ import RxSwift
 
 class BreedsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var loaderView: UIView!
+    
     let disposeBag = DisposeBag()
     var breedsData: BreedsData?
     
@@ -21,22 +23,31 @@ class BreedsViewController: UIViewController {
         self.getBreeds()
         tableView.tableFooterView = UIView()
     }
+
+    
+    
     @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
         self.getBreeds()
     }
     
     private func getBreeds(){
-        
+        setLoader(state: false)
         let getBreedsService = GetBreedsService()
         getBreedsService.fetchBreeds().observeOn(MainScheduler.instance).subscribe(onNext: { (breeds) in
+            self.setLoader(state: true)
             self.breedsData = breeds
             self.tableView.reloadData()
         }, onError: { (error) in
+            self.setLoader(state: true)
             print("Network Error")
             self.presentAlert("Server Error", message: "\(error.localizedDescription) Try again later")
         } ).disposed(by: disposeBag)
     }
     
+    private func setLoader(state: Bool){
+        self.loaderView.isHidden = state
+       
+    }
     private func presentAlert(_ title: String, message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
