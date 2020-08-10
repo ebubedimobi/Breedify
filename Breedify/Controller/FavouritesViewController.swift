@@ -65,12 +65,12 @@ extension FavouritesViewController: UITableViewDelegate{
     //swipe from right
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
-        let trash = deleteAction(at: indexPath)
+        let trash = self.deleteAction(at: indexPath)
         return UISwipeActionsConfiguration(actions:[trash])
     }
     
     
-    func deleteAction(at indexPath: IndexPath) -> UIContextualAction{
+   private func deleteAction(at indexPath: IndexPath) -> UIContextualAction{
         
         let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
             
