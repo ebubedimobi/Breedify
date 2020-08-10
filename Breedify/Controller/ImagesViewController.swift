@@ -104,17 +104,11 @@ extension ImagesViewController: UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.CellIdentifiers.forImages, for: indexPath) as! ImagesCollectionViewCell
         cell.delegate = self
+        
         if let imageUrl = URL(string: imagesData?.imageLinks[indexPath.row] ?? ""  ){
-            cell.dogImage.kf.indicatorType = .activity
-            cell.dogImage.kf.setImage(
-                with: imageUrl,
-                options: [
-                    .scaleFactor(UIScreen.main.scale),
-                    .transition(.fade(0.5)),
-                    .cacheOriginalImage
-            ])
-            
+            self.setCellImage(on: cell, with: imageUrl)
         }
+        
         cell.likeButtonOutlet.tag = indexPath.row
         
         let saveManager = SavedManager()
@@ -124,8 +118,28 @@ extension ImagesViewController: UICollectionViewDataSource{
             cell.likeButtonOutlet.setImage(UIImage(systemName: "heart"), for: .normal)
         }
         
-        
         return cell
+    }
+    
+    private func setCellImage(on cell: ImagesCollectionViewCell, with imageUrl: URL ){
+        cell.dogImage.kf.indicatorType = .activity
+        cell.dogImage.kf.setImage(
+            with: imageUrl,
+            options: [
+                .scaleFactor(UIScreen.main.scale),
+                .transition(.fade(0.5)),
+                .cacheOriginalImage
+        ]){
+            result in
+            switch result{
+            case .failure(_):
+                self.presentAlert("Server Error", message: "Can not load next Image.Connect to the internet")
+            case .success(_):
+                return
+            }
+            
+        }
+        
     }
     
 }
@@ -140,7 +154,7 @@ extension ImagesViewController: UICollectionViewDelegateFlowLayout{
     
 }
 
-//MARK: - Custom ImagesCollectionViewCellDelegate
+//MARK: - Custom ImagesCollectionViewCellDelegate method
 extension ImagesViewController: ImagesCollectionViewCellDelegate {
     
     func likeButtonTapped(index: Int, on likeButtonOutlet: UIButton) {
