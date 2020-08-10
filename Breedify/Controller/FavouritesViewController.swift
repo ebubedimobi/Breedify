@@ -61,6 +61,33 @@ extension FavouritesViewController: UITableViewDelegate{
         
         performSegue(withIdentifier: Constants.Segue.FavsToImages, sender: self)
     }
+    //MARK: - swipe gestures
+    //swipe from right
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        
+        let trash = deleteAction(at: indexPath)
+        return UISwipeActionsConfiguration(actions:[trash])
+    }
+    
+    
+    func deleteAction(at indexPath: IndexPath) -> UIContextualAction{
+        
+        let action = UIContextualAction(style: .destructive, title: "Delete") { (action, view, completion) in
+            
+            if let breedForDeletion = self.breedCategories?[indexPath.row].breedName{
+                let saveManager = SaveManager()
+                saveManager.deleteBreed(breedName: breedForDeletion)
+                self.tableView.reloadData()
+            }
+            
+        }
+        action.image = UIImage(systemName: "trash")
+        action.backgroundColor = .red
+        
+        return action
+        
+    }
+    
 }
 
 //MARK: - Segues and Navigation

@@ -111,7 +111,7 @@ extension ImagesViewController: UICollectionViewDataSource{
         
         cell.likeButtonOutlet.tag = indexPath.row
         
-        let saveManager = SavedManager()
+        let saveManager = SaveManager()
         if saveManager.checkIfImageAlreadyExists(with: imagesData?.imageLinks[indexPath.row] ?? ""){
             cell.likeButtonOutlet.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         }else{
@@ -167,9 +167,9 @@ extension ImagesViewController: ImagesCollectionViewCellDelegate {
             breedCategory = self.breedName!
         }
         
-        let saveManager = SavedManager()
+        let saveManager = SaveManager()
         if saveManager.checkIfImageAlreadyExists(with: imagesData?.imageLinks[index] ?? ""){
-            saveManager.deleteImage(with: imagesData?.imageLinks[index] ?? "")
+            saveManager.deleteImage(with: imagesData?.imageLinks[index] ?? "", and: breedCategory)
             likeButtonOutlet.setImage(UIImage(systemName: "heart"), for: .normal)
         }else{
             saveManager.saveToDataBase(imageLink: imagesData?.imageLinks[index] ?? "", breedsCategory: breedCategory)

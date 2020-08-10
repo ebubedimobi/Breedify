@@ -10,7 +10,7 @@ import Foundation
 import RealmSwift
 
 
-struct SavedManager {
+struct SaveManager {
     
     func saveToDataBase(imageLink: String, breedsCategory: String){
         
@@ -68,8 +68,9 @@ struct SavedManager {
         
     }
     
-    func deleteImage(with imageLink: String){
+    func deleteImage(with imageLink: String, and breedsName: String){
         let realm = try! Realm()
+        
         
         do{
             try realm.write{
@@ -79,6 +80,34 @@ struct SavedManager {
         }catch{
             print("error while deleting\(error)")
         }
+        
+        guard let breedsCategory = realm.objects(BreedsSavedData.self).filter("breedName CONTAINS %@", breedsName).first else {return}
+        
+        if breedsCategory.images.isEmpty {
+            do{
+                try realm.write{
+                    
+                    realm.delete(breedsCategory)
+                }
+            }catch{
+                print("error while deleting\(error)")
+            }
+        }
+    }
+    
+    func deleteBreed(breedName: String){
+        let realm = try! Realm()
+        guard let breedsCategory = realm.objects(BreedsSavedData.self).filter("breedName CONTAINS %@", breedName).first else {return}
+        do{
+            try realm.write{
+                realm.delete(breedsCategory.images)
+                realm.delete(breedsCategory)
+                
+            }
+        }catch{
+            print("error while deleting\(error)")
+        }
+        
         
     }
 }
